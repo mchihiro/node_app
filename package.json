@@ -1,0 +1,11 @@
+{
+  "name": "node_sample_app",
+  "version": "1.0",
+  "scripts": {
+    "start": "babel-node sample.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

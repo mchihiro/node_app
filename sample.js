@@ -1,4 +1,4 @@
-import HTTP from 'http'
+const HTTP = require('http')
 
 // リクエスト処理
 const doRequest = (request, response) => {

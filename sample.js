@@ -12,4 +12,4 @@ const SERVER = HTTP.createServer()
 SERVER.on('request', doRequest)
 SERVER.listen(process.env.PORT, process.env.IP)
 
-console.log('OK! Server Running!')
+console.log('Server Running!')

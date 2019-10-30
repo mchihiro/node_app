@@ -1,1 +1,1 @@
-web: babel-node sample.js
+web: yarn start

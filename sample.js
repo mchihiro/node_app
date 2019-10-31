@@ -1,4 +1,5 @@
 import HTTP from 'http'
+import FS from 'fs'
 
 // const HTTP = require('http')
 // リクエスト処理
@@ -10,9 +11,7 @@ const doRequest = (request, response) => {
 }
 
 // サーバの起動
-const SERVER = HTTP.createServer()
+const SERVER = HTTP.createServer().listen(process.env.PORT, process.env.IP)
 SERVER.on('request', doRequest)
-// SERVER.listen(3005)
-SERVER.listen(process.env.PORT, process.env.IP)
 
 console.log('Server Running!')

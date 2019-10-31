@@ -11,7 +11,7 @@ const doRequest = (req, res) => {
   response.end();
 }
 
-const SERVER = HTTP.createServer().listen(3005)
+const SERVER = HTTP.createServer().listen(process.env.PORT, process.env.IP)
 SERVER.on('request', doRequest)
 console.log('Server Running!')
 

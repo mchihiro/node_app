@@ -2,7 +2,7 @@
   "name": "node_sample_app",
   "version": "1.0",
   "scripts": {
-    "start": "babel-node sample.js"
+    "start": "babel-node entry.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",

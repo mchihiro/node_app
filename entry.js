@@ -2,12 +2,10 @@ import HTTP from 'http'
 import FS from 'fs'
 import PUG from 'pug'
 
-const index = FS.readFileSync('./index.pug', 'utf-8')
+const index = FS.readFileSync('./views/index.pug', 'utf-8')
 
-// const HTTP = require('http')
 // リクエスト処理
 const doRequest = (request, response) => {
-  const random = Math.floor(Math.random() * 3)
   FS.readFile(
     './index.html',
     'utf-8',

@@ -5,9 +5,15 @@ import FS from 'fs'
 // リクエスト処理
 const doRequest = (request, response) => {
   console.log(response)
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  FS.readFile('./index.html', 'utf-8', response.write('200', {'Content-type', 'text/html'}))
-  response.end();
+  FS.readFile(
+    './index.html',
+    'utf-8',
+    (err, data) => {
+      response.writeHead(200, { 'Content-Type': 'text/html' })
+      response.write(data)
+      response.end();
+    }
+  )
 }
 
 // サーバの起動

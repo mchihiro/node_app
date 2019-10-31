@@ -4,13 +4,15 @@ import FS from 'fs'
 // const HTTP = require('http')
 // リクエスト処理
 const doRequest = (request, response) => {
-  console.log(response)
+  const random = Math.floor(Math.random() * 3)
   FS.readFile(
     './index.html',
     'utf-8',
     (err, data) => {
+      const content =  ['hallo world1', 'hallo world2', 'hallo world3']
+      const dataCase = data.replace(/@content@/g, content[random])
       response.writeHead(200, { 'Content-Type': 'text/html' })
-      response.write(data)
+      response.write(dataCase)
       response.end();
     }
   )

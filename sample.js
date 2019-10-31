@@ -6,7 +6,7 @@ import FS from 'fs'
 const doRequest = (request, response) => {
   console.log(response)
   response.writeHead(200, {'Content-Type': 'text/plain'});
-  FS.readfile('./index.html', 'utf-8', response.write('200', {'Content-type', 'text/html'}))
+  FS.readFile('./index.html', 'utf-8', response.write('200', {'Content-type', 'text/html'}))
   response.end();
 }
 
